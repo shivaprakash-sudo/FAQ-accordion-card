@@ -1,40 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | FAQ Accordion Card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
+    <title>Frontend Mentor | FAQ Accordion Card</title>
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+    <!-- <style>
+      * {
+        outline: 1px solid red;
+      }
+    </style> -->
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body
+    class="pt-40 pb-20 min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-primary-gradient-soft-violet to-primary-gradient-soft-blue"
+  >
+    <main>
+      <article
+        class="max-w-[87%] mx-auto px-6 pb-10 bg-white rounded-3xl grid gap-7 [box-shadow:0_1.5rem_3rem_-2rem_#000]"
+      >
+        <div class="relative w-[85%] mx-auto">
+          <img
+            class="absolute -top-[6.5rem]"
+            src="./images/illustration-woman-online-mobile.svg"
+            alt="illustration woman online mobile"
+          />
+          <img src="./images/bg-pattern-mobile.svg" alt="" aria-hidden="true" />
+        </div>
+        <h2 class="text-3xl font-bold uppercase text-center">faq</h2>
+        <div class="divide-y divide-neutral-dividers-100">
+          <div class="py-4 first:pt-0 last:pb-0">
+            <details class="group">
+              <summary
+                class="cursor-pointer text-neutral-text-200 group-open:text-primary-text-ds-blue group-open:font-bold hover:text-primary-text-soft-red text-sm list-none flex gap-2 items-center justify-between"
+              >
+                <p>How many team members can I invite?</p>
+                <img
+                  class="group-open:rotate-180 group-open:transition-all group-open:duration-300 group-open:ease-in-out"
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </summary>
+              <p
+                class="text-neutral-text-100 text-xs mt-2 leading-normal group-open:transition group-open:duration-300 group-open:ease-in-out"
+              >
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan.
+              </p>
+            </details>
+          </div>
+          <div class="w-full py-4 first:pt-0 last:pb-0">
+            <details class="group">
+              <summary
+                class="cursor-pointer text-neutral-text-200 group-open:text-primary-text-ds-blue group-open:font-bold hover:text-primary-text-soft-red text-sm list-none flex items-center justify-between"
+              >
+                <p>What is the maximum file upload size?</p>
+                <img
+                  class="group-open:rotate-180 group-open:transition-all group-open:duration-300 group-open:ease-in-out"
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </summary>
+              <p
+                class="text-neutral-text-100 text-xs mt-2 leading-normal group-open:transition group-open:duration-300 group-open:ease-in-out"
+              >
+                No more than 2GB. All files in your account must fit your
+                allotted storage space.
+              </p>
+            </details>
+          </div>
+          <div class="w-full py-4 first:pt-0 last:pb-0">
+            <details class="group">
+              <summary
+                class="cursor-pointer text-neutral-text-200 group-open:text-primary-text-ds-blue group-open:font-bold hover:text-primary-text-soft-red text-sm list-none flex items-center justify-between"
+              >
+                <p>How do I reset my password?</p>
+                <img
+                  class="group-open:rotate-180 group-open:transition-all group-open:duration-300 group-open:ease-in-out"
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </summary>
+              <p
+                class="text-neutral-text-100 text-xs mt-2 leading-normal group-open:transition group-open:duration-300 group-open:ease-in-out"
+              >
+                Click “Forgot password” from the login page or “Change password”
+                from your profile page. A reset link will be emailed to you.
+              </p>
+            </details>
+          </div>
+          <div class="w-full py-4 first:pt-0 last:pb-0">
+            <details class="group">
+              <summary
+                class="cursor-pointer text-neutral-text-200 group-open:text-primary-text-ds-blue group-open:font-bold hover:text-primary-text-soft-red text-sm list-none flex items-center justify-between"
+              >
+                <p>Can I cancel my subscription?</p>
+                <img
+                  class="group-open:rotate-180 group-open:transition-all group-open:duration-300 group-open:ease-in-out"
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </summary>
+              <p
+                class="text-neutral-text-100 text-xs mt-2 leading-normal group-open:transition group-open:duration-300 group-open:ease-in-out"
+              >
+                Yes! Send us a message and we’ll process your request no
+                questions asked.
+              </p>
+            </details>
+          </div>
+          <div class="w-full py-4 first:pt-0 last:pb-0">
+            <details class="group">
+              <summary
+                class="cursor-pointer text-neutral-text-200 group-open:text-primary-text-ds-blue group-open:font-bold hover:text-primary-text-soft-red text-sm list-none flex items-center justify-between"
+              >
+                <p>Do you provide additional support?</p>
+                <img
+                  class="group-open:rotate-180 group-open:transition-all group-open:duration-300 group-open:ease-in-out"
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </summary>
+              <p
+                class="text-neutral-text-100 text-xs mt-2 leading-normal group-open:transition group-open:duration-300 group-open:ease-in-out"
+              >
+                Chat and email support is available 24/7. Phone lines are open
+                during normal business hours.
+              </p>
+            </details>
+          </div>
+        </div>
+      </article>
+    </main>
 
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="text-xxs mt-6">
+      Challenge by
+      <a
+        class="text-white hover:underline"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        class="text-white hover:underline"
+        href="https://www.frontendmentor.io/profile/shivaprakash-sudo"
+        target="_blank"
+        rel="noopener"
+        >Shiva Prakash Pendem</a
+      >.
+    </footer>
+  </body>
 </html>
